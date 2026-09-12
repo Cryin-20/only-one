@@ -12,7 +12,8 @@
 | 模型 / 服务 | 路径 | 变量名 | 备注 |
 |---|---|---|---|
 | MiniMax M3 / M2.7 / M2.5 | 云端 `~/.bashrc` | `ANTHROPIC_AUTH_TOKEN` | 125 字符 sk-cp- prefix（ssh 读）|
-| DeepSeek | 云端 `agent-data/webchat/keys.json` 或 `provider-config.json` | （内部）| healthCheck 用，非暴露 API |
+| DeepSeek | 主：云端 `/home/ubuntu/only-one/.env`（第 1 行）<br>源：本地 `D:\secrets\deepseek.env`<br>备：SQLite `only-one.db` → `provider_models.deepseek.api_key_enc`（Fernet 加密）| `DEEPSEEK_API_KEY` | 2026-09-12 接入 only-one；sk- 前缀 35 字符；**本地源文件格式是 `api key=sk-xxx` / `api URL=...`（非标准 VAR=value，解析要用 `sk-` 锚点）** |
+| DeepSeek（healthCheck 定义）| 云端 `agent-data/webchat/provider-config.json` + `agent-data/tools/provider-config.json` | （无 key，仅端点定义）| healthCheck 用，非暴露 API |
 | Gate（量化交易）| 本地 `D:\quant-bot\config\gate.env` | `GATE_API_KEY` / `GATE_SECRET` | chmod 600 |
 | OpenAI / Anthropic | （无） | — | 当前未用 |
 
