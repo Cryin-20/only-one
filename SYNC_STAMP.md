@@ -10,7 +10,7 @@
 
 | 项 | 值 |
 |---|---|
-| **最后同步时间** | **2026-09-12 16:49 +0800** |
+| **最后同步时间** | **2026-09-14 11:50 +0800** |
 | **内容版本** | FACT v13 ・ JOURNAL 44,493 B ・ secrets-index +DeepSeek 行 |
 | **来源** | Cherry Studio (Windows) → GitHub `cherry-memory` |
 | **云端位置** | `/home/ubuntu/.cherry/memory/` |
